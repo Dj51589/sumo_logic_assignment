@@ -1,0 +1,14 @@
+<md-content layout="column" flex class="md-padding" class="space-top-sm">
+    <div>
+        <md-button class="md-raised md-primary buttoncolor" ng-click="openDialog($event);"> 
+            Open Dialog
+        </md-button>
+        <div ng-show="team">
+        	<p>Your last selection was</p>
+        	<p>Team: {{team}}</p>
+        	<p ng-show="employee">Employee: {{employee}}</p>
+        </div>
+    </div>
+</md-content>   
+  
+

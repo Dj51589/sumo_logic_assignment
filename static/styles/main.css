@@ -1,0 +1,36 @@
+body{
+	font-family: Arial!important;
+}
+
+.dialogHeader{
+	background-color: #ffffff!important;
+    color: #3bb9ff!important;
+}
+
+.buttoncolor{
+	background-color: #3bb9ff!important;		
+}
+
+md-dialog {
+  min-width: 40%!important;
+  min-height: 50%!important;
+}
+
+md-checkbox.md-default-theme:not([disabled]).md-primary.md-checked .md-icon {
+    background-color: #3bb9ff!important;		
+}
+
+.mt20{
+	margin-top: 20px;
+}
+
+md-dialog md-select{
+    margin-top: -15px;
+    width: 100%;
+}
+
+md-autocomplete input:not(.md-input) {
+    width: 100%;
+    border: none;
+    line-height: 40px;
+}

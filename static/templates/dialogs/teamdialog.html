@@ -1,0 +1,51 @@
+<script type="text/ng-template" id="team-dialog.tmpl.html">
+	<md-dialog aria-label="Autocomplete Dialog Example" ng-cloak>
+  		<md-toolbar class="dialogHeader">
+	    	<div class="md-toolbar-tools">
+	      		<h2>Select an Employee</h2>
+	      		<span flex></span>
+	      		<md-button class="md-icon-button" ng-click="ctrl.cancel()">
+	        		<md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+	      		</md-button>
+	    	</div>
+	  	</md-toolbar>
+	  	<md-dialog-content>
+	    	<div class="md-dialog-content">
+	      		<form ng-submit="$event.preventDefault()">
+	      			<md-checkbox ng-model="checked" ng-init="checked=true" class="md-primary" style="margin:0px;"> 
+        				Send welcome email to employee
+      				</md-checkbox>
+      				<p class="mt20">Select a Team in the Organization</p>
+	      			<md-select ng-model="teamname" placeholder="Select Team">
+	          			<md-option ng-repeat="item in items" value="{{item.team}}">
+	            			{{item.team}}
+	          			</md-option>
+	        		</md-select>
+	        		<p class="mt20">Select an Employee</p>
+	        		<md-autocomplete
+	        			md-items="item in employee"
+	        			md-item-text="item"
+	        			md-search-text-change="querySearch(searchText)"
+	        			md-search-text="searchText"
+	        			md-selected-item="selectedItem"
+	        			placeholder="Select Employee"
+	        			md-no-cache=true
+	        			md-min-length="0">
+        				<md-item-template>
+				      		<span md-highlight-text="searchText">{{item}}</span>
+					    </md-item-template>
+	        		</md-autocomplete>
+
+	      		</form>
+	    	</div>
+	  	</md-dialog-content>
+	  	<div class="md-actions">
+	    	<md-button class="md-raised" md-autofocus ng-click="closeDialog()"> 
+            	Cancel
+        	</md-button>
+	    	<md-button class="md-raised md-primary buttoncolor" ng-click="closeDialog()"> 
+            	OK
+        	</md-button>
+	  	</div>
+	</md-dialog>
+</script>
